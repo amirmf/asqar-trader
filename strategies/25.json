@@ -1,0 +1,36 @@
+{
+  "name": "Asqar Strategy",
+  "desc": "asd",
+  "founder": "simple",
+  "signals": [
+    {
+      "src": "eva.evaShort",
+      "active": true,
+      "conf": {
+        "minProfit": 2,
+        "profit": 8,
+        "loss": -2,
+        "maxProfitUpToNowPctMargin": 60
+      }
+    }
+  ],
+  "trade": {
+    "mode": 1,
+    "symbol": "XBTUSDTM",
+    "checkingSignalTFs": ["15m","5m"],
+    "tradeTF": "15m",
+    "tf": "(15 * 60 * 1000)",
+    "tCheckOpen": "(4 * 1000)",
+    "closePosOnNewSignal": true,
+    "lvg": 10,
+    "fee": 0.12,
+    "cnLimitFetch": 50,
+    "safety": 10,
+    "amnt": 1
+  },
+  "backTest": {
+    "skipCnForBackTest": 10,
+    "backTestSince": "1643832397000",
+    "backTestToDate": "time.time()*1000 - 60 * 60 * 1000"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "24",
+  "desc": "24 stg",
+  "finder": "simple",
+  "signals": [
+    {
+      "src": "jesus.JesusLong",
+      "active": true,
+      "conf": {
+        "minProfit": 0.04,
+        "profit": 1.5,
+        "loss": -1,
+        "deadlineCnCount": 20,
+        "maxProfitUpToNowPctMargin": 60
+      }
+    },
+    {
+      "src": "jesus.JesusShort",
+      "active": true,
+      "conf": {
+        "minProfit": 0.04,
+        "profit": 1.5,
+        "loss": -1,
+        "deadlineCnCount": 20,
+        "maxProfitUpToNowPctMargin": 60
+      }
+    }
+  ],
+  "trade": {
+    "symbol": "XBTUSDTM",
+    "checkingSignalTFs": ["15m"],
+    "tradeTF": "15m",
+    "tf": "(15 * 60 * 1000)",
+    "tCheckOpen": "(4 * 1000)",
+    "closePosOnNewSignal": false,
+    "profitDynamic":true,
+    "lvg": 30,
+    "fee": 0.12,
+    "cnLimitFetch": 11,
+    "safety": 10,
+    "amnt": 40
+  },
+  "backTest": {
+    "skipCnForBackTest": 10,
+    "backTestSince": "int(time.time()*1000 - 1 * 5 * 60 * 60 * 1000)",
+    "backTestToDate": "int(time.time()*1000 - 60 * 60 * 1000)"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "24ET",
+  "desc": "24ET stg",
+  "finder": "simple",
+  "signals": [
+    {
+      "src": "jesusEt.JesusLong",
+      "active": true,
+      "conf": {
+        "minProfit": 0.2,
+        "profit": 1.5,
+        "loss": -1,
+        "deadlineCnCount": 8,
+        "maxProfitUpToNowPctMargin": 60
+      }
+    },
+    {
+      "src": "jesusEt.JesusShort",
+      "active": true,
+      "conf": {
+        "minProfit": 0.2,
+        "profit": 1.5,
+        "loss": -1,
+        "deadlineCnCount": 8,
+        "maxProfitUpToNowPctMargin": 60
+      }
+    }
+  ],
+  "trade": {
+    "symbol": "ETHUSDTM",
+    "checkingSignalTFs": ["15m"],
+    "tradeTF": "15m",
+    "tf": "(15 * 60 * 1000)",
+    "tCheckOpen": "(4 * 1000)",
+    "closePosOnNewSignal": false,
+    "profitDynamic":true,
+    "lvg": 30,
+    "fee": 0.12,
+    "cnLimitFetch": 11,
+    "safety": 1,
+    "amnt": 550
+  },
+  "backTest": {
+    "skipCnForBackTest": 10,
+    "backTestSince": "1643324400000",
+    "backTestToDate": "time.time()*1000 - 60 * 60 * 1000"
+  }
+}
